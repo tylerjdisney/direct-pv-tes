@@ -1,0 +1,41 @@
+/* Dept of Makers shared palette: desert dusk over the Salton Sea.
+   Edit only in the template repo so every project stays consistent. */
+:root {
+  --makers-indigo: #2E3A59;
+  --makers-indigo-light: #4A5880;
+  --makers-ochre: #C8962E;
+  --makers-sand: #F7F4EE;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--makers-indigo);
+  --md-primary-fg-color--light: var(--makers-indigo-light);
+  --md-primary-fg-color--dark: #1F2840;
+  --md-accent-fg-color: var(--makers-ochre);
+  --md-typeset-a-color: #3B5BA9;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1F2840;
+  --md-accent-fg-color: var(--makers-ochre);
+  --md-typeset-a-color: #9DB4F0;
+}
+
+/* Build photos: full width, softly framed, never wider than the column. */
+.md-typeset img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
+/* Step headings in assembly guides get a little more air. */
+.md-typeset h2 {
+  margin-top: 2.2em;
+}
+
+/* BOM and other wide tables scroll inside themselves on phones. */
+.md-typeset__table {
+  overflow-x: auto;
+}

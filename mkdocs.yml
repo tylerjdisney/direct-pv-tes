@@ -1,0 +1,69 @@
+# Website settings. Replace the CAPITALIZED placeholders.
+site_name: DirectPV TES HW Tank
+site_description: Direct PV Thermal Energy Storage for small space heating
+site_author: Tyler Disney
+site_url: https://mars-doom.github.io/shower-pods/
+repo_url: https://github.com/tylerjdisney/direct-pv-tes
+edit_uri: edit/main/docs/
+copyright: >
+  Hardware CERN-OHL-W-2.0 · Docs CC BY-SA 4.0 ·
+  
+
+
+# Page order in the left-hand menu (and in the PDF).
+nav:
+  - Overview: index.md
+  - Bill of materials: bom.md
+  - Assembly: assembly.md
+  - Operation: operation.md
+  - Design notes: design-notes.md
+  - Journal: journal.md
+
+# ---- Shared Dept of Makers styling. Makers shouldn't need to edit below here. ----
+theme:
+  name: material
+  font:
+    text: Source Sans 3
+    code: Source Code Pro
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.footer
+    - content.action.edit
+    - search.highlight
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/makers.css
+
+plugins:
+  - search
+  - table-reader:
+      data_path: "."
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true

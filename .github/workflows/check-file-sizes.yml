@@ -1,0 +1,30 @@
+# Keeps the repo small enough for GitHub Pages and fast to clone.
+# Warns on files over 5 MB, fails on files over 50 MB.
+name: Check file sizes
+
+on: [push, pull_request]
+
+jobs:
+  sizes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check
+        run: |
+          fail=0
+          while IFS= read -r -d '' f; do
+            size=$(stat -c %s "$f")
+            mb=$((size / 1048576))
+            if [ "$size" -gt 52428800 ]; then
+              echo "::error file=$f::$f is ${mb} MB. Over 50 MB: move it to Zenodo or a drive and link it."
+              fail=1
+            elif [ "$size" -gt 5242880 ]; then
+              echo "::warning file=$f::$f is ${mb} MB. Photos should be under 1 MB: run tools/resize_photos.py."
+            fi
+          done < <(git ls-files -z)
+          total=$(du -sm --exclude=.git . | cut -f1)
+          echo "Repo size (excluding history): ${total} MB"
+          if [ "$total" -gt 800 ]; then
+            echo "::warning::Repo is ${total} MB. GitHub Pages sites are capped at 1 GB."
+          fi
+          exit $fail

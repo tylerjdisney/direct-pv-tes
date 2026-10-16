@@ -1,0 +1,13 @@
+section,id,item,qty,unit,spec,supplier,part_no,unit_cost_usd,notes
+PV Array,PV-1,120W PV Panels,6,ea,,,,,
+PV Array,PV-2,Panel Wiring,,,,,,,
+PV Array,PV-3,Combiner Box,,,,,,,
+PV Array,PV-4,Breaker,,,,,,,
+PV Array,PV-5,Wiring to Tank,,,,,,,
+Heating Wand,HW-1,Heating Element,,,,,,,
+Heating Wand,HW-2,PVC Tube,,,,,,,
+Heating Wand,HW-3,PVC Threaded Fitting,,,,,,,
+Heating Wand,HW-4,Wand Wires,,,,,,,
+Controls,C-1,Relay,,,,,,,
+Controls,C-2,Temperature Controller,,,,,,,
+Tank,T-1,14g SS Tank,,,,,,,

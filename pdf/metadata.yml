@@ -1,0 +1,22 @@
+# Shared PDF styling for all Dept of Makers projects.
+# Edit only in the template repo so every project's PDF matches.
+date: \today
+documentclass: article
+papersize: letter
+geometry: margin=0.9in
+fontsize: 11pt
+linestretch: 1.15
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+toccolor: "black"
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyhf{}
+  - \fancyfoot[L]{\small Mars College Dept of Makers}
+  - \fancyfoot[R]{\small \thepage}
+  - \renewcommand{\headrulewidth}{0pt}
+  - \usepackage{needspace}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}

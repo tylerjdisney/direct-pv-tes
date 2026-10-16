@@ -1,0 +1,8 @@
+# Tools to build the website. Installed automatically by GitHub Actions.
+# To preview locally:  pip install -r requirements.txt  then  mkdocs serve
+mkdocs>=1.6,<2          # pinned: MkDocs 2.0 breaks plugins and themes
+mkdocs-material>=9.5,<10
+mkdocs-table-reader-plugin>=2.0,<4
+pandas>=2.0
+tabulate>=0.9
+Pillow>=10.0

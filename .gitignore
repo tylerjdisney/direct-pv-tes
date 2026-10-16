@@ -1,0 +1,43 @@
+# Built website and PDF (generated automatically, don't commit)
+site/
+*.pdf.tmp
+build/
+
+# CAD backups and temp files
+*.FCBak
+*.FCStd1
+*.bak
+*.tmp
+*.0001.rvt
+*.000?.rvt
+*.skb
+*.dwl
+*.dwl2
+~$*
+*.autosave
+*-backups/
+*.kicad_prl
+fp-info-cache
+
+# Video: host on YouTube/Vimeo instead
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Raw camera files: archive on Zenodo or a drive instead
+*.CR2
+*.CR3
+*.NEF
+*.ARW
+*.DNG
+*.RAF
+*.HEIC
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+__pycache__/

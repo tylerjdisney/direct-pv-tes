@@ -1,0 +1,39 @@
+# When you publish a release (e.g. tag v1.0), this builds a PDF of the full
+# documentation and attaches it to the release for download.
+name: Release PDF
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends pandoc texlive-xetex \
+            texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern
+      - name: Build PDF
+        id: build
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          PDF=$(python3 tools/build_pdf.py "$VERSION" | tail -n 1)
+          echo "pdf=$PDF" >> "$GITHUB_OUTPUT"
+      - name: Attach to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" "${{ steps.build.outputs.pdf }}" --clobber
+      - name: Save as workflow artifact (manual runs)
+        if: github.event_name != 'release'
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation-pdf
+          path: build/*.pdf
