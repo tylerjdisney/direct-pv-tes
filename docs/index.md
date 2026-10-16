@@ -3,7 +3,7 @@
 <!-- This page is the home page of your documentation website. -->
 
 ![Cold Tiny House](docs/images/sunnyandfrosty.jpg)
-![Cold Tiny House](docs/images/solavagedPV.jpg)
+![Cold Tiny House](docs/images/salvagedPV.jpg)
 ![Cold Tiny House](docs/images/tank_and_heater.jpg)
 ![Cold Tiny House](docs/images/pvtes_diagram.png)
 
