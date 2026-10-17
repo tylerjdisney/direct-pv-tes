@@ -1,7 +1,7 @@
 # Design notes
 
 System Diagram:
-![Diagram](images/pvtes_diagram.jpg)
+![Diagram](images/pvtes_diagram.png)
 
 Salvaged PV Array, (6) 120w panels
 ![pv-array](images/pv-array.jpg)
