@@ -6,7 +6,7 @@
 
 ![Cold Tiny House](docs/images/sunnyandfrosty.jpg)
 ![Cold Tiny House](docs/images/salvagedPV.jpg)
-![Cold Tiny House](docs/images/tank_and_heater.jpg)
+![Cold Tiny House](docs/images/tank-and-controls1.jpg)
 ![Cold Tiny House](docs/images/pvtes_diagram.png)
 
 **Maker:** Tyler Disney

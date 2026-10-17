@@ -4,7 +4,7 @@
 
 ![Cold Tiny House](images/sunnyandfrosty.jpg)
 ![Cold Tiny House](images/salvagedPV.jpg)
-![Cold Tiny House](images/tank_and_heater.jpg)
+![Cold Tiny House](images/tank-and-controls1.jpg)
 ![Cold Tiny House](images/pvtes_diagram.png)
 
 ## Project Status: Operational
